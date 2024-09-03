@@ -10,6 +10,9 @@ function inverter(str) {
     return resultado;
 }
 
+function inverterPalavra() {
+    let p = prompt('Digite uma palavra: ');
+    console.log(inverter(p));
+}
 
-let p = prompt('Digite uma palavra: ');
-console.log(inverter(p));
+module.exports = { inverterPalavra };

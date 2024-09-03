@@ -1,3 +1,5 @@
+function faturamento() {
+
 var fs = require('fs');
 var obj = JSON.parse(fs.readFileSync('./dados.json', 'utf8'));
 
@@ -28,9 +30,12 @@ obj.forEach(obj => {
             faturamentosAcimaMedia++;
         } 
     }
-)
-
+);
 
 console.log("O menor valor de faturamento ocorrido em um dia do mês: " + menorVal);
 console.log("O maior valor de faturamento ocorrido em um dia do mês: " + maiorVal);
 console.log("Número de dias no mês em que o valor de faturamento diário foi superior à média mensal: " + faturamentosAcimaMedia);
+
+}
+
+module.exports = { faturamento };

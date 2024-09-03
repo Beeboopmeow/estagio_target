@@ -17,11 +17,16 @@ function isFibonacci(num) {
     }
 }
 
+function fibonacci() { 
+    const prompt = require('prompt-sync')();
+    let number = Number(prompt('Digite um número: '));
+    // const number = 8;
 
-const number = 8;
-
-if (isFibonacci(number)) {
-    console.log(`${number} pertence à sequência de Fibonacci.`);
-} else {
-    console.log(`${number} não pertence à sequência de Fibonacci.`);
+    if (isFibonacci(number)) {
+        console.log(`${number} pertence à sequência de Fibonacci.`);
+    } else {
+        console.log(`${number} não pertence à sequência de Fibonacci.`);
+    }
 }
+
+module.exports = { fibonacci };
